@@ -1,0 +1,4 @@
+<view>
+  <view>项目地址,防止看不到{{url}}</view>
+  <web-view src="{{url}}"></web-view>
+</view>

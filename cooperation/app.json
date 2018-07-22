@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/register/register",
+    "pages/news/news",
+    "pages/delivery/delivery",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/photo/photo",
+    "pages/detail/detail"
+    
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "干货品读",
+    "navigationBarTextStyle":"black"
+  },
+    "tabBar": {
+      "selectedColor": "#ffba00",
+      "list": [
+        {
+          "pagePath": "pages/news/news",
+          "text": "新闻",
+          "iconPath": "images/news_normal.png",
+          "selectedIconPath": "images/news_selected.png"
+        },
+        {
+          "pagePath": "pages/delivery/delivery",
+          "text": "快递",
+          "iconPath": "images/delivery_normal.png",
+          "selectedIconPath": "images/delivery_selected.png"
+         
+        }
+      ]
+    }
+}

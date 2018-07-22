@@ -1,2 +1,15 @@
-# -
-PDA端对应的微信小程序入门版：对干货API进行分类处理，支持视频播放，图片缩放，快递时效查询
+# Gank.io-Reading-Mini
+
+* API：https://gank.io/api/data/category/count/page
+* method  get
+* pages Android、IOS、WEB、VIDEO、PICTURE
+* video Support playback, does not support automatic stop
+* picture Support zoom in and out
+* graph
+	* ![1](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/1.PNG)
+	* ![2](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/2.PNG)
+	* ![3](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/3.PNG)
+	* ![4](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/4.PNG)
+	* ![5](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/5.PNG)
+	* ![6](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/6.PNG)
+	* ![7](https://github.com/raojianxiong/Gank.io-Reading-Mini/tree/master/screenshot/7.PNG)

@@ -1,0 +1,3 @@
+<view>
+  <image src="{{url}}" mode='scaleToFill' bindtouchstart='touchStartHandle' bindtouchmove='touchMoveHandle' bindload='load' style="width: {{ touch.scaleWidth }}px;height: {{ touch.scaleHeight }}px"></image>
+</view>

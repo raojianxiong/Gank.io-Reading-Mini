@@ -1,0 +1,127 @@
+<view>
+  <scroll-view scroll-x="true" scroll-with-animation="true" style='width:100%;white-space:nowrap;'>
+    <view class='tab'>
+      <view class="tab-nav" style='font-size:14px'>
+        <view wx:key="{{tabNav.tabItem}}" wx:for="{{tabNav.tabItem}}" bindtap="setTab" data-index="{{index}}" style="min-width:20%;max-width:20%;text-align:center;height: 80rpx;{{index>4?'border-bottom: 1rpx dotted #ddd;':''}}">{{item.text}}</view>
+        <view>
+          <view class="tab-line" style="width:{{100/tabNav.tabNum}}%;transform:translateX({{100*showTab}}%);"></view>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+  <!--下面可以以用include标签  -->
+  <view class='items'>
+
+    <!-- Android -->
+    <scroll-view scroll-y="true" style="height:3000rpx;" bindscrolltolower="onLoadMore">
+
+      <view hidden='{{!android}}' class='item' style="flex-direction:column;" wx:for="{{result[0].list}}" wx:key="{{result[0].list}}" bindtap='onItemClick' data-index="{{index}}">
+
+
+        <view class='content'>
+          <view wx:if="{{item.images != null}}">
+            <image class='cover' src='{{item.images[0]}}' mode='aspectFill'></image>
+          </view>
+          <view class='title'>
+            <text>{{item.who}}</text>
+          </view>
+          <view class='date'>
+            <text>{{item.createdAt}}</text>
+          </view>
+          <view class='link'>
+            <text>{{item.url}}</text>
+          </view>
+          <view class='summary'>
+            <text>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- IOS -->
+
+      <view hidden='{{!ios}}' class='item' style="flex-direction:column;" wx:for="{{result[1].list}}" wx:key="{{result[1].list}}" bindtap='onItemClick' data-index="{{index}}">
+
+
+        <view class='content'>
+          <view wx:if="{{item.images != null}}">
+            <image class='cover' src='{{item.images[0]}}' mode='aspectFill'></image>
+          </view>
+          <view class='title'>
+            <text>{{item.who}}</text>
+          </view>
+          <view class='date'>
+            <text>{{item.createdAt}}</text>
+          </view>
+          <view class='link'>
+            <text>{{item.url}}</text>
+          </view>
+          <view class='summary'>
+            <text>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- IOS -->
+
+      <view hidden='{{!web}}' class='item' style="flex-direction:column;" wx:for="{{result[2].list}}" wx:key="{{result[2].list}}" bindtap='onItemClick' data-index="{{index}}">
+
+
+        <view class='content'>
+          <view wx:if="{{item.images != null}}">
+            <image class='cover' src='{{item.images[0]}}' mode='aspectFill'></image>
+          </view>
+          <view class='title'>
+            <text>{{item.who}}</text>
+          </view>
+          <view class='date'>
+            <text>{{item.createdAt}}</text>
+          </view>
+          <view class='link'>
+            <text>{{item.url}}</text>
+          </view>
+          <view class='summary'>
+            <text>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+
+
+      <!-- 休息视频 -->
+
+      <view hidden='{{!video}}' class='item' style="flex-direction:column;" wx:for="{{result[3].list}}" wx:key="{{result[3].list}}" bindtap='onItemClick' data-index="{{index}}">
+
+
+        <view class='content'>
+
+          <view >
+            <video class='cover' src='{{item.url}}' bindfullscreenchange="videoChange"></video>
+          </view>
+          <view class='summary'>
+            <text>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+
+
+      <!-- 福利 -->
+
+      <view hidden='{{!picture}}' class='item' style="flex-direction:column;" wx:for="{{result[4].list}}" wx:key="{{result[4].list}}" bindtap='onItemClick' data-index="{{index}}">
+
+
+        <view class='content'>
+          <image class='cover' src='{{item.url}}' mode='aspectFill'></image>
+          <view class='title '>
+            <text>{{item.who}}</text>
+          </view>
+
+          <view class='summary'>
+            <text>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+      <!--hidden用户频繁切换  -->
+      <view class='loadMore ' hidden='{{!isLoadMore}}'>正在载入....</view>
+      <view class='loadFinish ' hidden='{{!isLoadFinish}}'>已加载全部</view>
+    </scroll-view>
+  </view>
+</view>
